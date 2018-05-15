@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.TeacherEntity" table="teacher" schema="databaseexp">
+        <id name="tid" column="tid"/>
+        <property name="tPassword" column="tPassword"/>
+        <property name="tName" column="tName"/>
+        <property name="tSex" column="tSex"/>
+        <property name="tEducation" column="tEducation"/>
+        <property name="tTitle" column="tTitle"/>
+        <property name="did" column="did"/>
+    </class>
+</hibernate-mapping>

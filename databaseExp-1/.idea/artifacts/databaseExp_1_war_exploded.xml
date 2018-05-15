@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="databaseExp-1:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="databaseExp-1/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="databaseExp-1" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.16.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.16.RELEASE" />
+          <element id="library" level="project" name="Hibernate 5.2.16-5.2.16" />
+          <element id="library" level="project" name="org.apache.commons:commons-dbcp2:2.1" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:5.1.46" />
+          <element id="library" level="project" name="com.fasterxml.jackson.core:jackson-databind:2.7.4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

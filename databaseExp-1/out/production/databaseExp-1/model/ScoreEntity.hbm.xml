@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.ScoreEntity" table="score" schema="databaseexp">
+        <composite-id>
+            <key-property name="sid" column="sid"/>
+            <key-property name="cid" column="cid"/>
+        </composite-id>
+        <property name="academicYear" column="academic_year"/>
+        <property name="semester" column="semester"/>
+        <property name="usualResults" column="usualResults"/>
+        <property name="examResults" column="examResults"/>
+        <property name="totalResults" column="totalResults"/>
+    </class>
+</hibernate-mapping>
