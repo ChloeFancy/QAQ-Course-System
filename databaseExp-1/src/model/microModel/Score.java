@@ -49,4 +49,14 @@ public class Score implements Serializable {
 
     int TotalResults;
     int UsualResults;
+
+    public String getAcademicYear() {
+        return academicYear;
+    }
+
+    public void setAcademicYear(String academicYear) {
+        this.academicYear = academicYear;
+    }
+
+    String academicYear;
 }

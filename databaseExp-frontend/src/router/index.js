@@ -5,6 +5,7 @@ import login from "@/components/login"
 import logedinPage from "@/components/logedinPage"
 import adminTable from "@/components/tables/administrator/adminTable";
 import studentTable from "@/components/tables/student/studentTable";
+import teacherTable from "@/components/tables/teacher/teacherTable";
 
 Vue.use(Router);
 
@@ -44,6 +45,12 @@ export default new Router({
           path: '/student/table/:tableName',
           name: 'studentTable',
           component: studentTable,
+          props: true
+        },
+        {
+          path: '/teacher/table/:tableName',
+          name: 'teacherTable',
+          component: teacherTable,
           props: true
         }
       ]

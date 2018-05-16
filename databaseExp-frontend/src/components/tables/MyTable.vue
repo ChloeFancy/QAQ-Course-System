@@ -1,12 +1,12 @@
 <template>
   <div>
-    <el-form size="mini" label-width="100px" id="center" :inline="true">
-      <el-form-item v-for="(value,key) in queryData" :key="key" :label="key">
-        <el-input v-model="queryData[key]"></el-input>
-      </el-form-item>
-      <br>
-      <el-button type="info" @click="search">搜索</el-button>
-    </el-form>
+    <my-search
+      v-if="searchType!==null"
+      :search-type="searchType"
+      :query-data="queryData"
+      @search="doSearch"
+    >
+    </my-search>
 
     <el-button
       v-if="showAddNewBtn"
@@ -66,19 +66,27 @@
 </template>
 
 <script>
-  import httpUtil from "../../myHttp/httpUtil";
   import editForm from "./editForm";
   import administrationOper from "./operations/administratorOper";
   import chooseCourse from "./operations/chooseCourse";
   import deleteCourse from "./operations/deleteCourse";
+  import MySearch from "./search/search";
+
   export default {
-    name: "testTable",
-    components: {editForm,administrationOper,chooseCourse,deleteCourse},
+    name: "myTable",
+    components: {
+      editForm,
+      administrationOper,
+      chooseCourse,
+      deleteCourse,
+      MySearch
+    },
     props:{
       "showAddNewBtn":{type:Boolean},
       "myTableData":{type:Array},
       "queryData":{type:Object},
       "operationType":{type:String},
+      "searchType":{type:String}
       // "tableName":{type:String}
     },
     data(){
@@ -90,8 +98,10 @@
       }
     },
     methods:{
-      search(){
-        this.$emit('search',this.queryData);
+      doSearch(queryData){
+        console.log('2:',queryData);
+
+        this.$emit('search',queryData);
       },
       addNew(){
         let keys = Object.keys(this.myTableData[0]);

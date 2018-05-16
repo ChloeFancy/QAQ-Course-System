@@ -27,8 +27,8 @@ public class ScoreDAOImpl implements ScoreDAO {
 
         String hql = "from ScoreEntity as score where score.sid="+scoreEntity.getSid();
 //        hql+=" and score.cid="+scoreEntity.getCid();
-        hql+=" and score.semester="+scoreEntity.getSemester();
-        hql+=" and score.academicYear="+scoreEntity.getAcademicYear();
+        hql+=" and score.semester='"+scoreEntity.getSemester()+"'";
+        hql+=" and score.academicYear='"+scoreEntity.getAcademicYear()+"'";
 
         Query query = s.createQuery(hql);
         List list = query.list();
@@ -37,15 +37,16 @@ public class ScoreDAOImpl implements ScoreDAO {
         while(iterator.hasNext()){
             scoreEntity1 = (ScoreEntity) iterator.next();
             Course course = new Course();
-            course.setCid(scoreEntity1.getCid());
-            course.setSemester(scoreEntity1.getSemester());
             course.setAcademicYear(scoreEntity1.getAcademicYear());
+            course.setSemester(scoreEntity1.getSemester());
+            course.setCid(scoreEntity1.getCid());
             result.add(course);
         }
         return result;
     }
 
-
+    //查找当前学年学期的成绩，
+    //或者根据前端的成绩查询
     @Override
     public List<Object> findSomeScore(ScoreEntity scoreEntity) {
         List<Object> result = new ArrayList<>();
@@ -54,9 +55,9 @@ public class ScoreDAOImpl implements ScoreDAO {
 
         String hql = "from ScoreEntity as score where score.sid="+scoreEntity.getSid();
 //        hql+=" and score.cid="+scoreEntity.getCid();
-        hql+=" and score.semester="+scoreEntity.getSemester();
-        hql+=" and score.academicYear="+scoreEntity.getAcademicYear();
-
+        hql+=" and score.semester='"+scoreEntity.getSemester()+"'";
+        hql+=" and score.academicYear='"+scoreEntity.getAcademicYear()+"'";
+System.out.println(hql);
         Query query = s.createQuery(hql);
         List list = query.list();
         Iterator iterator = list.iterator();
@@ -65,12 +66,13 @@ public class ScoreDAOImpl implements ScoreDAO {
             scoreEntity1 = (ScoreEntity) iterator.next();
             if(scoreEntity!=null){
                 Score score = new Score();
-                score.setCid(scoreEntity1.getCid());
+                score.setAcademicYear(scoreEntity1.getAcademicYear());
                 score.setSemester(scoreEntity1.getSemester());
+                score.setCid(scoreEntity1.getCid());
                 try{
+                    score.setUsualResults(scoreEntity1.getUsualResults());
                     score.setExamResults(scoreEntity1.getExamResults());
                     score.setTotalResults(scoreEntity1.getTotalResults());
-                    score.setUsualResults(scoreEntity1.getUsualResults());
                 }catch (Exception ex){
                     if(score==null) System.out.println(1);
                     if(scoreEntity1==null) System.out.println(2);
@@ -78,8 +80,9 @@ public class ScoreDAOImpl implements ScoreDAO {
                 }
                 result.add(score);
             }
-
         }
         return result;
     }
+
+
 }

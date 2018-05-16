@@ -64,5 +64,4 @@ public class ScoreController extends BaseController<ScoreEntity> {
         }
         return response;
     }
-
 }

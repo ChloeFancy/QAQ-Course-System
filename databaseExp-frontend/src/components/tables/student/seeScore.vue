@@ -5,6 +5,7 @@
       :query-data="queryData"
       :operationType="operationType"
       :showAddNewBtn="showAddNewBtn"
+      :searchType="searchType"
       @search="search"
       @delete="deleteCourse"
     >
@@ -23,7 +24,8 @@
         tableData:[], //传给myTable的表格数据
         queryData:{}, //查询的数据对象
         showAddNewBtn:false, //是否显示新增按钮
-        operationType:'canDeleteCourse' //操作框显示什么类型的按钮
+        operationType:'canDeleteCourse', //操作框显示什么类型的按钮
+        searchType:'semesterSearch'
       }
     },
     mounted(){
@@ -39,6 +41,7 @@
         let url = httpUtil.generateURL('score','findSomeScore',query);
         httpUtil.getData(this,url).then((response)=>{
           this.tableData = response.body.data;
+
           if(this.tableData.length>0){
             this.queryData = httpUtil.initQuery(this.tableData[0]);
           }
@@ -47,9 +50,11 @@
         });
       },
       search(queryData){
+        console.log('3:',queryData);
+
         queryData.sid = this.$store.state.user.sid;
-        queryData.semester = this.$store.state.time.semester;
-        queryData.academicYear = this.$store.state.time.academicYear;
+        // queryData.semester = this.$store.state.time.semester;
+        // queryData.academicYear = this.$store.state.time.academicYear;
 
         let url = httpUtil.generateURL('score','findSomeScore',queryData);
         httpUtil.getData(this,url).then((response)=>{

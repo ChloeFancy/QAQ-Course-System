@@ -4,8 +4,9 @@ vue.use(vuex);
 export default new vuex.Store({
   state:{
     time:{
-      academicYear:1,
-      semester:3
+      academicYear:'2017-2018',
+      semester:'冬季',
+      openTerm:'2017-2018 冬季'
     },
     user:{},
     menuTitles:{
@@ -38,10 +39,10 @@ export default new vuex.Store({
         //     // {tableName:'score',chi:'',oper:'find'},
         // ]
       },
-      'teacher':{
+      teacher:{
         '课程管理':[
-          // {tablesName:'',chi:'所有课程',oper:'findQuery'},
-
+          {tableName:'seeTeachingCourse',chi:'本学期所有课程',oper:'findQuery'},
+          {tableName:'editGrade',chi:'编辑成绩',oper:'findQuery'},
         ]
       }
     }

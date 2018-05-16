@@ -5,6 +5,7 @@
       :query-data="queryData"
       :operationType="operationType"
       :showAddNewBtn="showAddNewBtn"
+      :searchType="searchType"
       @search="search"
       @delete="deleteCourse"
     >
@@ -24,6 +25,7 @@
         queryData:{}, //查询的数据对象
         showAddNewBtn:false, //是否显示新增按钮
         operationType:'canDeleteCourse', //操作框显示什么类型的按钮
+        searchType:'semesterSearch'
       }
     },
     mounted(){

@@ -5,6 +5,8 @@
       :query-data="queryData"
       :operationType="operationType"
       :showAddNewBtn="showAddNewBtn"
+      :searchType="searchType"
+
       @search="search"
       @chooseCourse="chooseCourse"
     >
@@ -20,10 +22,11 @@
     components:{MyTable},
     data(){
       return{
-        tableData:[], //传给myTable的表格数据
-        queryData:{}, //查询的数据对象
-        showAddNewBtn:false, //是否显示新增按钮
-        operationType:'chooseCourse' //操作框显示什么类型的按钮
+        tableData: [], //传给myTable的表格数据
+        queryData: {}, //查询的数据对象
+        showAddNewBtn: false, //是否显示新增按钮
+        operationType:'chooseCourse', //操作框显示什么类型的按钮
+        searchType:'commonSearch'
       }
     },
     mounted(){

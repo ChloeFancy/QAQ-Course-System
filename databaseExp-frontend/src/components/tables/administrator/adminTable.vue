@@ -1,11 +1,12 @@
 <template>
     <div>
       <my-table
-        :my-table-data="tableData"
+        :myTableData="tableData"
         :query-data="queryData"
         :operationType="operationType"
         :showAddNewBtn="showAddNewBtn"
         :tableName="tableName"
+        :searchType="searchType"
         @search="search"
         @update="save"
         @add="addNew"
@@ -34,7 +35,8 @@
         tableData:[], //传给myTable的表格数据
         queryData:{}, //查询的数据对象
         showAddNewBtn:true, //是否显示新增按钮
-        operationType:'admin' //操作框显示什么类型的按钮
+        operationType:'admin', //操作框显示什么类型的按钮\
+        searchType:'commonSearch'
       }
     },
     methods:{
