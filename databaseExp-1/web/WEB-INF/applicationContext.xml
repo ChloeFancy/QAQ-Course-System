@@ -59,6 +59,7 @@
                 <value>model.StudentEntity</value>
                 <value>model.TeacherEntity</value>
                 <value>model.TeachingEntity</value>
+                <value>model.MyscoreEntity</value>
             </list>
         </property>
     </bean>

@@ -1,5 +1,7 @@
 package model;
 
+import util.MD5;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -46,7 +48,7 @@ public class AdministratorEntity {
         if (o == null || getClass() != o.getClass()) return false;
         AdministratorEntity that = (AdministratorEntity) o;
         return Objects.equals(aid, that.aid) &&
-                Objects.equals(aPassword, that.aPassword) ;
+                Objects.equals(aPassword, MD5.getMD5(that.aPassword).toLowerCase()) ;
 //                &&
 //                Objects.equals(aName, that.aName);
     }

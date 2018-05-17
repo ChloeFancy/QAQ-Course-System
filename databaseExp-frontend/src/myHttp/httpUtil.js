@@ -51,5 +51,5 @@ export default {
   search(instance,tableName,query){
     let url = this.generateURL(tableName,"findByQuery",query);
     return this.getData(instance,url);
-  }
+  },
 }

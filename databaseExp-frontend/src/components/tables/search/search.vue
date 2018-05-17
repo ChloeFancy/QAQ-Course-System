@@ -15,6 +15,7 @@
 
       <grade-course-search
         v-if="searchType==='gradeCourseSearch'"
+        @search="search"
       >
 
       </grade-course-search>

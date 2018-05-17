@@ -38,5 +38,7 @@
         <mapping class="model.TeacherEntity"/>
         <mapping class="model.TeachingEntity"/>
         <mapping resource="model/TeachingEntity.hbm.xml"/>
+        <mapping class="model.MyscoreEntity"/>
+        <mapping resource="model/MyscoreEntity.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

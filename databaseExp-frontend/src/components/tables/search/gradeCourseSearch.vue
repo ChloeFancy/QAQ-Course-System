@@ -44,7 +44,8 @@
         });
       },
       changeGradeCourse(cid){
-        this.$emit('changeGradeCourse',cid);
+        console.log(cid);
+        this.$emit('search',cid);
       }
     },
     mounted(){

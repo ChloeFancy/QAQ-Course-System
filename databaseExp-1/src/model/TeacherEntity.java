@@ -1,5 +1,7 @@
 package model;
 
+import util.MD5;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -91,7 +93,7 @@ public class TeacherEntity {
         if (o == null || getClass() != o.getClass()) return false;
         TeacherEntity that = (TeacherEntity) o;
         return Objects.equals(tid, that.tid) &&
-                Objects.equals(tPassword, that.tPassword)
+                Objects.equals(tPassword,  MD5.getMD5(that.tPassword).toLowerCase())
 //                &&
 //                Objects.equals(tName, that.tName) &&
 //                Objects.equals(tSex, that.tSex) &&

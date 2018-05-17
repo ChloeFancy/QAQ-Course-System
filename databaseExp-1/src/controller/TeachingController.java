@@ -18,8 +18,6 @@ import java.util.List;
 @CrossOrigin("http://localhost:8081")
 public class TeachingController extends BaseController<TeachingEntity>{
 
-
-
     //    http://localhost:8080/teaching/findTeachingCourseName?tid=0102&openTerm=2017-2018%20冬季
     @RequestMapping(value="/findTeachingCourseName",method = {RequestMethod.GET})
     @ResponseBody

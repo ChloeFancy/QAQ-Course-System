@@ -16,12 +16,13 @@
             v-for="(item,index) in semester"
             :key="index"
             :label="item"
-            :value="item"
+            :value="item.toString().slice(0,item.length-2)"
           >
           </el-option>
         </el-select>
         <el-button type="info" @click="search">搜索</el-button>
       </el-form>
+
     </div>
 </template>
 
@@ -41,8 +42,8 @@
     methods:{
       search(){
         console.log('0:',this.query);
-        this.$emit('search',this.query);
-      }
+        this.$emit('search',this.query.academicYear+" "+this.query.semester);
+      },
     }
   }
 </script>

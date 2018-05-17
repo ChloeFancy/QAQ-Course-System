@@ -1,5 +1,7 @@
 package model;
 
+import util.MD5;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
@@ -91,7 +93,7 @@ public class StudentEntity {
         if (o == null || getClass() != o.getClass()) return false;
         StudentEntity that = (StudentEntity) o;
         return Objects.equals(sid, that.sid) &&
-                Objects.equals(sPassword, that.sPassword)
+                Objects.equals(sPassword,  MD5.getMD5(that.sPassword).toLowerCase())
 //                &&
 //                Objects.equals(sName, that.sName) &&
 //                Objects.equals(sClassName, that.sClassName) &&

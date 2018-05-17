@@ -6,7 +6,7 @@
       :operationType="operationType"
       :showAddNewBtn="showAddNewBtn"
       :searchType="searchType"
-
+      @search="updateCourseTable"
     >
     </my-table>
   </div>
@@ -32,6 +32,18 @@
         let query = {
           tid:this.$store.state.user.tid,
           openTerm:this.$store.state.time.academicYear+" "+this.$store.state.time.semester,
+        };
+        let url = httpUtil.generateURL("teaching","findTeachingCourseName",query);
+        httpUtil.getData(this,url).then((response)=>{
+          this.tableData = response.body.data;//显示老师在该学年该学期开的课
+        }).catch((e)=>{
+          console.log(e);
+        });
+      },
+      updateCourseTable(queryData){
+        let query = {
+          tid:this.$store.state.user.tid,
+          openTerm: queryData,
         };
         let url = httpUtil.generateURL("teaching","findTeachingCourseName",query);
         httpUtil.getData(this,url).then((response)=>{
