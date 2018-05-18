@@ -1,6 +1,8 @@
 <template>
     <div>
+      <admin-info v-if="tableName==='changePwd'"></admin-info>
       <my-table
+        v-else
         :myTableData="tableData"
         :query-data="queryData"
         :operationType="operationType"
@@ -12,12 +14,6 @@
         @add="addNew"
         @delete="deleteRow"
       >
-        <!--<administrator-oper-->
-          <!--slot="operation"-->
-          <!--@edit="edit(scope.row)"-->
-          <!--@delete="deleteRow"-->
-        <!--&gt;-->
-        <!--</administrator-oper>-->
       </my-table>
     </div>
 </template>
@@ -26,10 +22,15 @@
   import httpUtil from "../../../myHttp/httpUtil";
   import MyTable from "../MyTable";
   import administratorOper from "../operations/administratorOper";
+  import adminInfo from "./adminInfo";
   export default {
     name: "adminTable",
-    components: {MyTable,administratorOper},
-    props:['tableName'],
+    components: {MyTable,administratorOper,adminInfo},
+    props:{
+      tableName:{
+        type:String
+      }
+    },
     data(){
       return{
         tableData:[], //传给myTable的表格数据

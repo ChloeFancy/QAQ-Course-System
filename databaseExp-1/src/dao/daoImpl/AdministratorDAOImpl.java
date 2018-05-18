@@ -1,7 +1,9 @@
 package dao.daoImpl;
 
+import com.alibaba.fastjson.JSONObject;
 import dao.AdministratorDAO;
 import model.AdministratorEntity;
+import model.StudentEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -22,77 +24,37 @@ public class AdministratorDAOImpl implements AdministratorDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-//    @Override
-//    public void add(AdministratorEntity administratorEntity) {
-//        Session s = sessionFactory.openSession();
-//        Transaction tx = s.beginTransaction();
-//        s.save(administratorEntity);
-//        tx.commit();
-//    }
-
-    @Override
-    public void delete(String id) {
-        sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session s = sessionFactory.openSession();
-        Transaction tx = s.beginTransaction();
-
-        String hql="delete AdministratorEntity as p where p.aid=?";
-
-        Query query= s.createQuery(hql);
-
-        query.setParameter(0,id);
-
-        query.executeUpdate();
-
-        tx.commit();
-    }
-
-    @Override
-    public AdministratorEntity login(String id, String password) {
-
-        sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session s = sessionFactory.openSession();
-        Transaction tx = s.beginTransaction();
-        //select
-        String hql = "from AdministratorEntity as a where a.aid=? and a.aPassword=?";
-        Query query = s.createQuery(hql);
-        query.setParameter(0,id);
-        query.setParameter(1,password);
-
-        List list = query.list();
-        Iterator iterator = list.iterator();
-
-        AdministratorEntity administratorEntity=null;
-        while(iterator.hasNext()){
-            administratorEntity = (AdministratorEntity)iterator.next();
-        }
-        return administratorEntity;
-    }
-
-//    @Override
-//    public List<AdministratorEntity> getAll() {
-//        sessionFactory = new Configuration().configure().buildSessionFactory();
-//        Session s = sessionFactory.openSession();
-//        Transaction tx = s.beginTransaction();
-//        //select
-//        String hql = "from AdministratorEntity as a";
-//        Query query = s.createQuery(hql);
-//
-//        List list = query.list();
-//        Iterator iterator = list.iterator();
-//
-//        List<AdministratorEntity> resultList = new ArrayList<>();
-//
-//        AdministratorEntity administratorEntity=null;
-//        while(iterator.hasNext()){
-//            administratorEntity = (AdministratorEntity)iterator.next();
-//            resultList.add(administratorEntity);
-//        }
-//        return resultList;
-//    }
-
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
+    @Override
+    public Boolean updatePassWord(JSONObject jsonObject) {
+        String oldPassword = jsonObject.getString("oldPassword");
+        String sid = jsonObject.getString("aid");
+        String newPassword = jsonObject.getString("newPassword");
+        BaseDAOImpl<AdministratorEntity> baseDAO = new BaseDAOImpl<>();
+        AdministratorEntity administratorEntity = new AdministratorEntity();
+        administratorEntity.setAid(sid);
+        administratorEntity.setaPassword(oldPassword);
+        try{
+            AdministratorEntity result = baseDAO.findOne(administratorEntity);
+            if(result!=null){
+                System.out.println("存在");
+                sessionFactory = new Configuration().configure().buildSessionFactory();
+                Session s = sessionFactory.openSession();
+                Transaction tx = s.beginTransaction();
+                String hql = "update AdministratorEntity set aPassword='"+newPassword+"' where aid="+sid;
+                Query query = s.createQuery(hql);
+                query.executeUpdate();
+                tx.commit();
+                return true;
+            }else{
+                return false;
+            }
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
+        return false;
+    }
 }

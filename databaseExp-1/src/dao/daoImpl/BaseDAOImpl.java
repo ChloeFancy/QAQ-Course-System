@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import sun.reflect.annotation.ExceptionProxy;
+import util.MD5;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -65,7 +66,6 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
     }
 
 
-
     @Override
     public List<T> findByQuery(T t) throws Exception {
         Session s = sessionFactory.openSession();
@@ -74,8 +74,6 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
         String className = t.getClass().getName();
         className = className.substring(className.indexOf(".")+1);
         Field[] field = t.getClass().getDeclaredFields();
-
-
 
         StringBuffer hql = new StringBuffer("from "+className+" as a ");
 
@@ -88,8 +86,8 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
                 get+=name;
             }
             Method m = t.getClass().getMethod(get);
-            String value = (String) m.invoke(t);
-            if(value!=null){
+            String value = ""+ m.invoke(t);
+            if(!value.equals("null")){
                 if(hql.indexOf("&")==-1){
                     hql.append("where ");
                 }
@@ -124,9 +122,21 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
         Iterator iterator = list.iterator();
 
         List<T> resultList = new ArrayList<>();
+
         T administratorEntity=null;
+        String getpwd = "get"+className.substring(0,1).toLowerCase()+"Password";
+        String setPwd = getpwd.replace("get","set");
+
+        System.out.println(getpwd+"  "+setPwd);
         while(iterator.hasNext()){
             administratorEntity = (T)iterator.next();
+//            Method m = administratorEntity.getClass().getMethod(getpwd);
+////            String value = ""+ m.invoke(t);
+////            String decode = MD5.hexStringToBytes(value);
+////            System.out.println(value+" "+decode);
+////            Method setMethod = administratorEntity.getClass().getMethod(setPwd,String.class);
+////            setMethod.invoke(t,decode);
+
             resultList.add(administratorEntity);
         }
         return resultList;

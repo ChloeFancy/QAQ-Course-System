@@ -24,7 +24,7 @@
         tableData:[], //传给myTable的表格数据
         queryData:{}, //查询的数据对象
         showAddNewBtn:false, //是否显示新增按钮
-        operationType:'canDeleteCourse', //操作框显示什么类型的按钮
+        operationType:'null', //操作框显示什么类型的按钮
         searchType:'semesterSearch'
       }
     },
@@ -32,15 +32,22 @@
       this.getData();
     },
     methods:{
-      getData(){
+      getData(openTerm){
         let query = {};
         query.sid = this.$store.state.user.sid;
-        query.semester = this.$store.state.time.semester;
-        query.academicYear = this.$store.state.time.academicYear;
-
-        let url = httpUtil.generateURL('score','findSomeScore',query);
+        query.openTerm = openTerm||this.$store.state.time.openTerm;
+        // http://localhost:8080/Myscore/findScoreForStudent?sid=15123010&openTerm=2018-2019%20%E6%98%A5%E5%AD%A3
+        let url = httpUtil.generateURL('Myscore','findScoreForStudent',query);
         httpUtil.getData(this,url).then((response)=>{
-          this.tableData = response.body.data;
+          this.tableData = response.body.data.map((cur)=>{
+            var score = {};
+            score['cName'] = cur['cName'];
+            score['cid'] = cur['cid'];
+            score['usualResults'] = cur['usualResults'];
+            score['examResults'] = cur['examResults'];
+            score['totalResults'] = cur['totalResults'];
+            return score;
+          });
 
           if(this.tableData.length>0){
             this.queryData = httpUtil.initQuery(this.tableData[0]);
@@ -52,33 +59,33 @@
       search(queryData){
         console.log('3:',queryData);
 
-        queryData.sid = this.$store.state.user.sid;
-        // queryData.semester = this.$store.state.time.semester;
-        // queryData.academicYear = this.$store.state.time.academicYear;
-
-        let url = httpUtil.generateURL('score','findSomeScore',queryData);
-        httpUtil.getData(this,url).then((response)=>{
-          this.tableData = response.body.data;
-          if(this.tableData.length>0){
-            this.queryData = httpUtil.initQuery(this.tableData[0]);
-          }
-        }).catch((e)=>{
-          console.log(e);
-        });
+        this.getData(queryData);
       },
       deleteCourse(row){
-        let url = httpUtil.generateURL('score','delete');
-        httpUtil.postData(this,url,row).then((response) => {
+        if(row['usualResults']){
+          this.$message({
+            type: 'fail',
+            message: `退课失败!`
+          });
+          return;
+        }
+        let myscore = {};
+        myscore.sid = this.$store.state.user.sid;
+        myscore.openTerm = this.$store.state.time.openTerm;
+        myscore.tid = row['tid'];
+        myscore.cid = row['cid'];
+        let url = httpUtil.generateURL('Myscore','delete');
+        httpUtil.postData(this,url,myscore).then((response) => {
           if (response.body.resCode === '1') {
             this.$message({
               type: 'success',
-              message: `选课成功!`
+              message: `退课成功!`
             });
             this.getData();
           } else {
             this.$message({
               type: 'fail',
-              message: `选课失败!`
+              message: `退课失败!`
             });
           }
         }).catch(() => {

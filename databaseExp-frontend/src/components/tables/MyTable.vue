@@ -139,6 +139,7 @@
       //学生-选课
       chooseCourses(row, oper, hint) {
         //添加到成绩表里，但是没有成绩，只有学年，学期，学号，课号
+        console.log(row);
         this.$emit('chooseCourses',row);
       },
       confirmOperation(row, oper, hint, fn) {

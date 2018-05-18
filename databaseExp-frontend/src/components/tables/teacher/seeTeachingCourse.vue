@@ -28,14 +28,24 @@
       }
     },
     methods:{
-      getData(){
-        let query = {
+      getData(queryData){
+        let query = queryData||{
           tid:this.$store.state.user.tid,
-          openTerm:this.$store.state.time.academicYear+" "+this.$store.state.time.semester,
+          openTerm:this.$store.state.time.openTerm,
         };
         let url = httpUtil.generateURL("teaching","findTeachingCourseName",query);
         httpUtil.getData(this,url).then((response)=>{
-          this.tableData = response.body.data;//显示老师在该学年该学期开的课
+          //显示老师在该学年该学期开的课
+
+          this.tableData = response.body.data.map((cur)=>{
+            var course = {};
+            course["cName"]=cur["cName"];
+            course["cid"]=cur["cid"];
+            course["cCredit"]=cur["cCredit"];
+            course["cTotalHours"]=cur["cTotalHours"];
+            course["ttime"]=cur["ttime"];
+            return course;
+          });
         }).catch((e)=>{
           console.log(e);
         });
@@ -45,12 +55,7 @@
           tid:this.$store.state.user.tid,
           openTerm: queryData,
         };
-        let url = httpUtil.generateURL("teaching","findTeachingCourseName",query);
-        httpUtil.getData(this,url).then((response)=>{
-          this.tableData = response.body.data;//显示老师在该学年该学期开的课
-        }).catch((e)=>{
-          console.log(e);
-        });
+        this.getData(query);
       }
     },
     mounted(){

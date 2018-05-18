@@ -1,6 +1,5 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="databaseExp-1:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="databaseExp-1/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -14,6 +13,7 @@
           <element id="library" level="project" name="org.apache.commons:commons-dbcp2:2.1" />
           <element id="library" level="project" name="mysql:mysql-connector-java:5.1.46" />
           <element id="library" level="project" name="com.fasterxml.jackson.core:jackson-databind:2.7.4" />
+          <element id="library" level="project" name="com.alibaba:fastjson:1.2.47" />
         </element>
       </element>
     </root>

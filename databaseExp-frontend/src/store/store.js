@@ -4,13 +4,14 @@ vue.use(vuex);
 export default new vuex.Store({
   state:{
     time:{
-      academicYear:'2017-2018',
-      semester:'冬季',
-      openTerm:'2017-2018 冬季'
+      academicYear:'2018-2019',
+      semester:'春季',
+      openTerm:'2018-2019 春季'
     },
     user:{},
     menuTitles:{
       administrator:{
+        '个人中心':[{tableName:'changePwd',chi:'修改密码',oper:'findOne'}],
         '数据管理':[
             {tableName:'teacher',chi:'教师',oper:'findAll'},
             {tableName:'student',chi:'学生',oper:'findAll'},
@@ -23,7 +24,7 @@ export default new vuex.Store({
         //   ]
       },
       student:{
-        '个人信息':[{tableName:'student',chi:'我的信息',oper:'findOne'}],
+        '个人中心':[{tableName:'changePwd',chi:'修改密码',oper:'findOne'}],
         '课程管理':[
           {tableName:'seeAllCourse',chi:'所有课程',oper:'findAll'},
           {tableName:'chooseCourse',chi:'选课',oper:'findAll'},
@@ -40,6 +41,7 @@ export default new vuex.Store({
         // ]
       },
       teacher:{
+        '个人中心':[{tableName:'changePwd',chi:'修改密码',oper:'findOne'}],
         '课程管理':[
           {tableName:'seeTeachingCourse',chi:'本学期所有课程',oper:'findQuery'},
           {tableName:'editGrade',chi:'编辑成绩',oper:'findQuery'},

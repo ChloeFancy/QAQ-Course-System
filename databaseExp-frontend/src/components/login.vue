@@ -7,7 +7,7 @@
           <el-input v-model="idNumber" placeholder="请输入学号/工号"></el-input>
         </el-form-item>
         <el-form-item label="密码" :required="true">
-          <el-input v-model="password" placeholder="请输入密码"></el-input>
+          <el-input v-model="password" type="password" placeholder="请输入密码" @key.enter="login"></el-input>
         </el-form-item>
         <div>
           <el-radio-group v-model="identity">

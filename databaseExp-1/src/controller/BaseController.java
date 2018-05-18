@@ -106,18 +106,9 @@ public abstract class BaseController<T> {
         BaseDAOImpl<T> admin = new BaseDAOImpl<>();
         try{
             request.setCharacterEncoding("utf-8");
-//           System.out.println(request.getParameter("requestBody"));
-//        System.out.println(admin.toString());
             admin.update(t);
-//            response.setData(tmp);
-//            if(tmp==null){
-//                //fail
-//                response.setResCode("0");
-//            }else{
-                //success
             response.setResCode("1");
             response.setResMsg("success");
-//            }
             return response;
         }catch(Exception ex){
             ex.printStackTrace();
@@ -153,9 +144,18 @@ public abstract class BaseController<T> {
     }
 
 
+    @RequestMapping(value = "/test",method={RequestMethod.GET})
+    public @ResponseBody
+    BasicResponse test(T t,HttpServletRequest httpServletRequest){
+        BasicResponse response = new BasicResponse();
+        response.setResCode("222");
+        response.setResMsg("test");
+        return response;
+    }
+
     @RequestMapping(value="/findByQuery",method = {RequestMethod.GET})
     public @ResponseBody
-    BasicResponse findByQuery(T t,HttpServletRequest request) {
+    BasicResponse findByQuery(T t) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");

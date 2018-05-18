@@ -1,14 +1,12 @@
 package dao;
 
+import com.alibaba.fastjson.JSONObject;
 import model.AdministratorEntity;
 
 import java.util.List;
 
 public interface AdministratorDAO {
-//     void add(AdministratorEntity administratorEntity);
-     void delete(String id);
-     AdministratorEntity login(String id, String password);
-//     List<AdministratorEntity> getAll();
+     Boolean updatePassWord(JSONObject jsonObject);
 }
 
 

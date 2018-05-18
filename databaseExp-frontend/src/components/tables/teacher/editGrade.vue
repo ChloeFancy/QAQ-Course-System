@@ -40,9 +40,17 @@
           cid:cid
         };
         let url = httpUtil.generateURL('Myscore','findByCourse',query);
-        console.log(url);
+
         httpUtil.getData(this,url).then((response)=>{
-          this.tableData = response.body.data;
+          this.tableData = response.body.data.map((cur)=>{
+            var score = {};
+            score['sName'] = cur['sName'];
+            score['sid'] = cur['sid'];
+            score['usualResults'] = cur['usualResults'];
+            score['examResults'] = cur['examResults'];
+            score['totalResults'] = cur['totalResults'];
+            return score;
+          });
         }).catch((e)=>{
           console.log(e);
         });
@@ -50,21 +58,47 @@
       addGrade(formData){
         let url = httpUtil.generateURL("Myscore","add");
         httpUtil.postData(this,url,this.makeDataCurrent(formData)).then((response)=>{
-          this.updateGradeTable(this.currentCid);
+          if(response.body.resCode==='1'){
+            this.$message({
+              type: 'success',
+              message: `添加成功!`
+            });
+            this.updateGradeTable(this.currentCid);
+          }else{
+            this.$message({
+              type: 'fail',
+              message: `添加失败!`
+            });
+          }
         });
       },
       update(formData){
-
         let url = httpUtil.generateURL("Myscore","update");
         httpUtil.postData(this,url,this.makeDataCurrent(formData)).then((response)=>{
+          this.$message({
+            type: 'success',
+            message: `更新成功!`
+          });
           this.updateGradeTable(this.currentCid);
         });
       },
       deleteRow(formData){
-        let url = httpUtil.generateURL("Myscore","delete");
-        httpUtil.postData(this,url,this.makeDataCurrent(formData)).then((response)=>{
-          this.updateGradeTable(this.currentCid);
-        });
+        let url = httpUtil.generateURL("Myscore","deleteByTeacher");
+        httpUtil.postData(this,url,this.makeDataCurrent(formData))
+          .then((response)=>{
+            if(response.body.resCode==='1'){
+              this.$message({
+                type: 'success',
+                message: `删除成功!`
+              });
+              this.updateGradeTable(this.currentCid);
+            }else{
+              this.$message({
+                type: 'fail',
+                message: `删除失败!`
+              });
+            }
+          });
       },
       makeDataCurrent(obj){
         obj.cid = this.currentCid;

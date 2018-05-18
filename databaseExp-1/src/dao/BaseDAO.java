@@ -19,4 +19,6 @@ public interface BaseDAO<T> {
 
     int delete(T t) throws Exception;
 
+
+
 }

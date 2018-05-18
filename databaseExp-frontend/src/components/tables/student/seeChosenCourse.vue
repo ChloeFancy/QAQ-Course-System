@@ -28,18 +28,25 @@
         searchType:'semesterSearch'
       }
     },
-    mounted(){
-      this.getData();
-    },
     methods:{
-      getData(){
+      getData(openTerm){
         let query = {};
         query.sid = this.$store.state.user.sid;
-        query.semester = this.$store.state.time.semester;
-        query.academicYear = this.$store.state.time.academicYear;
-        let url = httpUtil.generateURL('score','findSomeCourse',query);
+        query.openTerm = openTerm||this.$store.state.time.openTerm;
+        let url = httpUtil.generateURL('Myscore','findCourseForStudent',query);
+        console.log(url);
         httpUtil.getData(this,url).then((response)=>{
-          this.tableData = response.body.data;
+          this.tableData = response.body.data.map((cur)=>{
+            var course = {};
+            course["cName"]=cur["cName"];
+            course["cid"]=cur["cid"];
+            course["tName"]=cur["tName"];
+            course["tid"]=cur["tid"];
+            course["cCredit"]=cur["cCredit"];
+            course["cTotalHours"]=cur["cTotalHours"];
+            course["ttime"]=cur["ttime"];
+            return course;
+          });
           if(this.tableData.length>0){
             this.queryData = httpUtil.initQuery(this.tableData[0]);
           }
@@ -48,38 +55,36 @@
         });
       },
       search(queryData){
-        queryData.sid = this.$store.state.user.sid;
-        queryData.semester = this.$store.state.time.semester;
-        queryData.academicYear = this.$store.state.time.academicYear;
-        httpUtil.search(this,'score',queryData).then((response)=>{
-          this.tableData = response.body.data;
-        }).catch((e)=>{
-          console.log(e);
-        });
+        this.getData(queryData);
       },
       deleteCourse(row){
-        let url = httpUtil.generateURL('score','delete');
+        row.sid = this.$store.state.user.sid;
+        row.openTerm = this.$store.state.time.openTerm;
+        let url = httpUtil.generateURL('Myscore','deleteByStudent');
         httpUtil.postData(this,url,row).then((response) => {
           if (response.body.resCode === '1') {
             this.$message({
               type: 'success',
-              message: `选课成功!`
+              message: `退课成功!`
             });
             this.getData();
           } else {
             this.$message({
               type: 'fail',
-              message: `选课失败!`
+              message: `退课失败!`
             });
           }
         }).catch(() => {
           this.$message({
             type: 'fail',
-            message: `保存失败!`
+            message: `退课失败!`
           });
         });
       }
-    }
+    },
+    mounted(){
+      this.getData();
+    },
   }
 </script>
 

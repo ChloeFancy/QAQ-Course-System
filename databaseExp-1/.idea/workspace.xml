@@ -3,10 +3,75 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="databaseExp-1:war exploded" />
+      <artifact name="databaseExp-1:war exploded2" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef34349b-04e5-4bb3-a8f4-d7e6cfb8ea04" name="Default" comment="" />
+    <list default="true" id="ef34349b-04e5-4bb3-a8f4-d7e6cfb8ea04" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/databaseExp_1_war_exploded2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/databaseExp_1_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/databaseExp_1_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databaseExp-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/databaseExp-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/classes/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/classes/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/classes/controller/TeachingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/classes/controller/TeachingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/classes/dao/daoImpl/BaseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/classes/dao/daoImpl/BaseDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/databaseExp_1_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/controller/AdministratorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/controller/AdministratorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/controller/MyscoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/controller/MyscoreController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/controller/TeachingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/controller/TeachingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/AdministratorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/AdministratorDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/MyscoreDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/MyscoreDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/StudentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/TeacherDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/TeacherDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/AdministratorDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/AdministratorDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/BaseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/BaseDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/MyscoreDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/MyscoreDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/StudentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/StudentDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/TeacherDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/TeacherDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/teachingDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/daoImpl/teachingDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/dao/teachingDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/dao/teachingDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/model/MyscoreEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/model/MyscoreEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/databaseExp-1/util/MD5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/databaseExp-1/util/MD5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdministratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/MyscoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MyscoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/TeachingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TeachingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AdministratorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdministratorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/MyscoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/MyscoreDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/TeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/TeacherDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/daoImpl/AdministratorDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/daoImpl/AdministratorDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/daoImpl/BaseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/daoImpl/BaseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/daoImpl/MyscoreDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/daoImpl/MyscoreDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/daoImpl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/daoImpl/StudentDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/daoImpl/TeacherDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/daoImpl/TeacherDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/daoImpl/teachingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/daoImpl/teachingDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/teachingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/teachingDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MyscoreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyscoreEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/MD5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/MD5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/MyTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/MyTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/administrator/adminTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/administrator/adminTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/search/gradeCourseSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/search/gradeCourseSearch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/search/semesterSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/search/semesterSearch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/chooseCourse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/chooseCourse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/seeChosenCourse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/seeChosenCourse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/seeScore.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/seeScore.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/studentTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/student/studentTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/teacher/editGrade.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/teacher/editGrade.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/teacher/seeTeachingCourse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/teacher/seeTeachingCourse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/teacher/teacherTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/components/tables/teacher/teacherTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseExp-frontend/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../databaseExp-frontend/src/store/store.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,113 +112,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/BaseDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="53" column="29" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdministratorEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/AdministratorEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="50" column="53" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/StudentEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="95" column="83" selection-start-line="95" selection-start-column="83" selection-end-line="95" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeacherEntity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/TeacherEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1311">
-              <caret line="100" column="56" lean-forward="true" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MD5.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/MD5.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyscoreDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/MyscoreDAO.java">
+      <file leaf-file-name="TeachingEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/TeachingEntity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" selection-start-line="8" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyscoreDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/MyscoreDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyscoreController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/MyscoreController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CourseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/CourseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -169,6 +132,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -178,40 +144,41 @@
         <option value="$PROJECT_DIR$/src/model/TeachingEntity.java" />
         <option value="$PROJECT_DIR$/src/model/BasicResponse.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/dao/AdministratorDAO.java" />
-        <option value="$PROJECT_DIR$/src/dao/StudentDAO.java" />
-        <option value="$PROJECT_DIR$/src/dao/daoImpl/StudentDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/dao/TeacherDAO.java" />
-        <option value="$PROJECT_DIR$/src/dao/daoImpl/TeacherDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/util/CharsetFilter.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/controller/BanjiController.java" />
         <option value="$PROJECT_DIR$/src/controller/CourseController.java" />
-        <option value="$PROJECT_DIR$/src/controller/TeacherController.java" />
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/controller/StudentController.java" />
         <option value="$PROJECT_DIR$/src/util/CustomMapper.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/model/microModel/Course.java" />
-        <option value="$PROJECT_DIR$/src/controller/AdministratorController.java" />
-        <option value="$PROJECT_DIR$/src/dao/daoImpl/AdministratorDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/dao/BaseDAO.java" />
-        <option value="$PROJECT_DIR$/src/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/dao/daoImpl/BaseDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/controller/ScoreController.java" />
         <option value="$PROJECT_DIR$/src/dao/ScoreDAO.java" />
         <option value="$PROJECT_DIR$/src/model/microModel/Score.java" />
         <option value="$PROJECT_DIR$/src/dao/daoImpl/ScoreDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/dao/teachingDAO.java" />
-        <option value="$PROJECT_DIR$/src/dao/daoImpl/teachingDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/controller/TeachingController.java" />
-        <option value="$PROJECT_DIR$/src/dao/MyscoreDAO.java" />
-        <option value="$PROJECT_DIR$/src/controller/MyscoreController.java" />
-        <option value="$PROJECT_DIR$/src/dao/daoImpl/MyscoreDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/util/MD5.java" />
         <option value="$PROJECT_DIR$/src/model/AdministratorEntity.java" />
         <option value="$PROJECT_DIR$/src/model/StudentEntity.java" />
         <option value="$PROJECT_DIR$/src/model/TeacherEntity.java" />
+        <option value="$PROJECT_DIR$/src/dao/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/model/MyscoreEntity.java" />
+        <option value="$PROJECT_DIR$/src/controller/StudentController.java" />
+        <option value="$PROJECT_DIR$/src/controller/MyscoreController.java" />
+        <option value="$PROJECT_DIR$/src/dao/daoImpl/MyscoreDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/dao/MyscoreDAO.java" />
+        <option value="$PROJECT_DIR$/src/dao/teachingDAO.java" />
+        <option value="$PROJECT_DIR$/src/controller/TeachingController.java" />
+        <option value="$PROJECT_DIR$/src/dao/daoImpl/teachingDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/util/MD5.java" />
+        <option value="$PROJECT_DIR$/src/dao/daoImpl/BaseDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/dao/TeacherDAO.java" />
+        <option value="$PROJECT_DIR$/src/dao/StudentDAO.java" />
+        <option value="$PROJECT_DIR$/src/dao/daoImpl/StudentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/dao/daoImpl/TeacherDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/controller/TeacherController.java" />
+        <option value="$PROJECT_DIR$/src/dao/AdministratorDAO.java" />
+        <option value="$PROJECT_DIR$/src/controller/AdministratorController.java" />
+        <option value="$PROJECT_DIR$/src/dao/daoImpl/AdministratorDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -236,11 +203,16 @@
     <option name="width" value="981" />
     <option name="height" value="1032" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -258,50 +230,12 @@
               <item name="databaseExp-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="databaseExp-1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="databaseExp-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="databaseExp-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="databaseExp-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="databaseExp-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="daoImpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="databaseExp-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="databaseExp-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="databaseExp-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="databaseExp-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="databaseExp-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="databaseExp-1" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="databaseExp-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="databaseExp-1" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,22 +246,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24709609" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
+      <recent name="model" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dao.daoImpl" />
       <recent name="model" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="model" />
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\databaseExp-1\src" />
@@ -394,13 +328,18 @@
       <deployment>
         <artifact name="databaseExp-1:war exploded">
           <settings>
+            <option name="CONTEXT_PATH" value="/fail" />
+          </settings>
+        </artifact>
+        <artifact name="databaseExp-1:war exploded2">
+          <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_databaseExp-1" />
-        <option name="JNDI_PORT" value="1100" />
+        <option name="JNDI_PORT" value="1103" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -458,6 +397,7 @@
       <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="databaseExp-1:war exploded" />
+          <artifact name="databaseExp-1:war exploded2" />
         </option>
       </method>
     </configuration>
@@ -488,15 +428,23 @@
       <workItem from="1526349648204" duration="8918000" />
       <workItem from="1526465994427" duration="9120000" />
       <workItem from="1526531031453" duration="6188000" />
+      <workItem from="1526573529199" duration="24000" />
+      <workItem from="1526573760267" duration="80000" />
+      <workItem from="1526606530819" duration="1992000" />
+      <workItem from="1526608600597" duration="39000" />
+      <workItem from="1526608759557" duration="9536000" />
+      <workItem from="1526629325553" duration="4849000" />
+      <workItem from="1526634232679" duration="52000" />
+      <workItem from="1526634602554" duration="16829000" />
+      <workItem from="1526654040310" duration="321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89095000" />
+    <option name="totallyTimeSpent" value="122817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.4268391" side_tool="true" weight="0.24686942" />
@@ -509,19 +457,18 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497979" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.25223613" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.53763443" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3094812" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.3291592" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5731609" visible="true" weight="0.40071556" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5731609" weight="0.43727598" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3291592" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291592" />
-      <window_info id="Persistence" order="2" sideWeight="0.24380952" side_tool="true" weight="0.26839128" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7561905" visible="true" weight="0.26839128" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32795697" />
+      <window_info id="Persistence" order="2" sideWeight="0.24832214" side_tool="true" weight="0.20129345" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7516779" visible="true" weight="0.23686337" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -529,6 +476,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.34347048" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.2795699" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -581,60 +529,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/TeachingEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/BasicResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/StudentDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/AdministratorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/TeacherDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/ScoreEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/TeachingEntity.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -666,44 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="33" column="90" lean-forward="true" selection-start-line="33" selection-start-column="90" selection-end-line="33" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/StudentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/CustomMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -722,26 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/AdministratorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,95 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/microModel/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="32" selection-end-column="24" />
-          <folding>
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/microModel/Score.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/TeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/AdministratorDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/TeacherDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="22" column="75" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ScoreController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="54" column="41" selection-start-line="47" selection-start-column="8" selection-end-line="64" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/teachingDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/teachingDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/TeachingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -858,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MyscoreEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/CourseEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -872,121 +620,275 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MyscoreEntity.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/src/model/microModel/Course.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+        <state relative-caret-position="266">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/ScoreDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/model/TeacherEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="209">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/ScoreDAO.java">
+    <entry file="jar://$PROJECT_DIR$/lib/fastjson-1.2.47.jar!/com/alibaba/fastjson/JSON.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        <state relative-caret-position="215">
+          <caret line="336" column="27" selection-start-line="336" selection-start-column="18" selection-end-line="336" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/CourseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/ScoreDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/MyscoreEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-5.2.16.Final.jar!/org/hibernate/dialect/MySQLDialect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/MyscoreDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MyscoreController.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/teachingDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="57">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/MyscoreDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state>
+          <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/teachingDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="627">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/BaseDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/TeachingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="34" column="60" lean-forward="true" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MyscoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1121">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/MD5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        <state relative-caret-position="418">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/AdministratorEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="50" column="53" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="53" />
+        <state relative-caret-position="209">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="1785" selection-start-line="1785" selection-end-line="1785" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/StudentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/BaseDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/TeacherDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/TeacherDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ScoreDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/AdministratorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/StudentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="36" column="41" selection-start-line="22" selection-start-column="4" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/AdministratorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/StudentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/StudentEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/daoImpl/AdministratorDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="95" column="83" selection-start-line="95" selection-start-column="83" selection-end-line="95" selection-end-column="83" />
+        <state relative-caret-position="471">
+          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/TeacherEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/model/TeachingEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="100" column="56" lean-forward="true" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
+        <state relative-caret-position="171">
+          <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/TeachingEntityPK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/TeachingEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -996,7 +898,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>databaseExp-1:war exploded</last-edited>
+          <last-edited>databaseExp-1:war exploded2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1009,7 +911,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring (databaseExp-1)|Spring</last-edited>
+          <last-edited>Web (databaseExp-1)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1057,7 +959,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>com.fasterxml.jackson.core:jackson-databind:2.7.4</last-edited>
+          <last-edited>Hibernate 5.2.16-5.2.16</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

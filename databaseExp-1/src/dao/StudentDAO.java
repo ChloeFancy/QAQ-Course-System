@@ -1,7 +1,8 @@
 package dao;
 
+import com.alibaba.fastjson.JSONObject;
 import model.StudentEntity;
 
 public interface StudentDAO {
-    StudentEntity login(String id, String password);
+    Boolean updatePassWord(JSONObject jsonObject);
 }

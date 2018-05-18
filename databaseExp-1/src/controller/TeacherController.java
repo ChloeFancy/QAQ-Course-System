@@ -1,6 +1,8 @@
 package controller;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import dao.daoImpl.StudentDAOImpl;
 import dao.daoImpl.TeacherDAOImpl;
 import model.BasicResponse;
@@ -19,24 +21,25 @@ import javax.servlet.http.HttpServletRequest;
 @CrossOrigin("http://localhost:8081")
 public class TeacherController extends BaseController<TeacherEntity>{
 
-    @RequestMapping(value="/login",method = {RequestMethod.GET})
+    @RequestMapping(value="/updatePassWord",method = {RequestMethod.POST})
     public @ResponseBody
-    BasicResponse login(TeacherEntity teacherEntity, HttpServletRequest request) {
+    BasicResponse updatePassWord(TeacherEntity teacherEntity, HttpServletRequest request) {
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
-        TeacherDAOImpl administratorDAOImpl = new TeacherDAOImpl();
+        TeacherDAOImpl teacherDAO = new TeacherDAOImpl();
         try{
-            TeacherEntity result = administratorDAOImpl.login(teacherEntity.getTid()
-                    ,teacherEntity.gettPassword());
-            if(result!=null){
-                request.getSession().setAttribute("session_id",result.getTid());
-                response.setData(result);
+            String data = request.getParameter("data");
+            JSONObject jsonObject = JSON.parseObject(data);
+
+            Boolean result = teacherDAO.updatePassWord(jsonObject);
+            if(result){
+                System.out.println("修改成功");
                 response.setResCode("1");
-                response.setResMsg("登录成功");
+                response.setResMsg("修改成功");
             }else{
-                response.setResCode("0");
-                response.setResMsg("登录失败");
+                response.setResCode("-1");
+                response.setResMsg("修改失败");
             }
         }catch(Exception ex){
             ex.printStackTrace();

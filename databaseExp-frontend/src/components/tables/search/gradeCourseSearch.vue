@@ -38,7 +38,16 @@
         };
         let url = httpUtil.generateURL("teaching","findTeachingCourseName",query);
         httpUtil.getData(this,url).then((response)=>{
-          this.courses = response.body.data;
+          this.courses = response.body.data.map((cur)=>{
+            var course = {};
+            course["cName"]=cur["cName"];
+            course["cid"]=cur["cid"];
+            course["cCredit"]=cur["cCredit"];
+            course["cTotalHours"]=cur["cTotalHours"];
+            course["ttime"]=cur["ttime"];
+            return course;
+          });
+          console.log(this.courses);
         }).catch((e)=>{
           console.log(e);
         });
