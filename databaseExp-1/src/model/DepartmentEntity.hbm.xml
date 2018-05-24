@@ -5,9 +5,17 @@
 <hibernate-mapping>
 
     <class name="model.DepartmentEntity" table="department" schema="databaseexp">
-        <id name="did" column="did"/>
-        <property name="dName" column="dName"/>
-        <property name="dOfficePlace" column="dOfficePlace"/>
-        <property name="dTelephone" column="dTelephone"/>
+        <id name="did">
+            <column name="did" sql-type="char(2)" length="2"/>
+        </id>
+        <property name="dName">
+            <column name="dName" sql-type="char(20)" length="20"/>
+        </property>
+        <property name="dOfficePlace">
+            <column name="dOfficePlace" sql-type="char(40)" length="40" not-null="true"/>
+        </property>
+        <property name="dTelephone">
+            <column name="dTelephone" sql-type="char(11)" length="11" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

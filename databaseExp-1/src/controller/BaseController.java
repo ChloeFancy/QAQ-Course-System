@@ -55,6 +55,7 @@ public abstract class BaseController<T> {
     @RequestMapping(value="/findAll",method = {RequestMethod.GET})
     public @ResponseBody
     BasicResponse findAll(T t, HttpServletRequest request) {
+
         BasicResponse response = new BasicResponse();
         response.setResCode("-1");
         response.setResMsg("Error");
@@ -64,10 +65,12 @@ public abstract class BaseController<T> {
             response.setResMsg(admin.countAll(t)+"");
             response.setResCode("1");
             response.setResMsg("success");
+
             return response;
         }catch(Exception ex){
             ex.printStackTrace();
         }
+
         return null;
     }
 

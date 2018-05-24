@@ -17,8 +17,7 @@ public class TeacherEntity {
     private String did;
 
     @Id
-    @Column(name = "tid")
-//    @ManyToOne(cascade = CascadeType.REFRESH)
+    @Column(name = "tid", nullable = false, length = 8)
     public String getTid() {
         return tid;
     }
@@ -28,7 +27,7 @@ public class TeacherEntity {
     }
 
     @Basic
-    @Column(name = "tPassword")
+    @Column(name = "tPassword", nullable = false, length = 40)
     public String gettPassword() {
         return tPassword;
     }
@@ -38,7 +37,7 @@ public class TeacherEntity {
     }
 
     @Basic
-    @Column(name = "tName")
+    @Column(name = "tName", nullable = false, length = 10)
     public String gettName() {
         return tName;
     }
@@ -48,7 +47,7 @@ public class TeacherEntity {
     }
 
     @Basic
-    @Column(name = "tSex")
+    @Column(name = "tSex", nullable = true, length = 20)
     public String gettSex() {
         return tSex;
     }
@@ -58,7 +57,7 @@ public class TeacherEntity {
     }
 
     @Basic
-    @Column(name = "tEducation")
+    @Column(name = "tEducation", nullable = true, length = 10)
     public String gettEducation() {
         return tEducation;
     }
@@ -68,7 +67,7 @@ public class TeacherEntity {
     }
 
     @Basic
-    @Column(name = "tTitle")
+    @Column(name = "tTitle", nullable = true, length = 10)
     public String gettTitle() {
         return tTitle;
     }
@@ -78,7 +77,7 @@ public class TeacherEntity {
     }
 
     @Basic
-    @Column(name = "did")
+    @Column(name = "did", nullable = true, length = 2)
     public String getDid() {
         return did;
     }

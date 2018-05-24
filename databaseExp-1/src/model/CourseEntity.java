@@ -12,7 +12,7 @@ public class CourseEntity {
     private Integer cTotalHours;
 
     @Id
-    @Column(name = "cid")
+    @Column(name = "cid", nullable = false, length = 10)
     public String getCid() {
         return cid;
     }
@@ -22,7 +22,7 @@ public class CourseEntity {
     }
 
     @Basic
-    @Column(name = "cName")
+    @Column(name = "cName", nullable = true, length = 60)
     public String getcName() {
         return cName;
     }
@@ -32,7 +32,7 @@ public class CourseEntity {
     }
 
     @Basic
-    @Column(name = "cCredit")
+    @Column(name = "cCredit", nullable = true)
     public Integer getcCredit() {
         return cCredit;
     }
@@ -42,7 +42,7 @@ public class CourseEntity {
     }
 
     @Basic
-    @Column(name = "cTotalHours")
+    @Column(name = "cTotalHours", nullable = true)
     public Integer getcTotalHours() {
         return cTotalHours;
     }

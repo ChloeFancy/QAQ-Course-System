@@ -12,9 +12,10 @@ public class TeachingEntity implements Serializable {
     private String cid;
     private String tid;
     private String ttime;
+    private Double scoreRate;
 
     @Id
-    @Column(name = "openTerm")
+    @Column(name = "openTerm", nullable = false, length = 14)
     public String getOpenTerm() {
         return openTerm;
     }
@@ -24,7 +25,7 @@ public class TeachingEntity implements Serializable {
     }
 
     @Id
-    @Column(name = "cid")
+    @Column(name = "cid", nullable = false, length = 10)
     public String getCid() {
         return cid;
     }
@@ -34,7 +35,7 @@ public class TeachingEntity implements Serializable {
     }
 
     @Id
-    @Column(name = "tid")
+    @Column(name = "tid", nullable = false, length = 8)
     public String getTid() {
         return tid;
     }
@@ -44,13 +45,23 @@ public class TeachingEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "ttime")
+    @Column(name = "ttime", nullable = true, length = 12)
     public String getTtime() {
         return ttime;
     }
 
     public void setTtime(String ttime) {
         this.ttime = ttime;
+    }
+
+    @Basic
+    @Column(name = "scoreRate", nullable = true, precision = 0)
+    public Double getScoreRate() {
+        return scoreRate;
+    }
+
+    public void setScoreRate(Double scoreRate) {
+        this.scoreRate = scoreRate;
     }
 
     @Override
@@ -61,12 +72,13 @@ public class TeachingEntity implements Serializable {
         return Objects.equals(openTerm, that.openTerm) &&
                 Objects.equals(cid, that.cid) &&
                 Objects.equals(tid, that.tid) &&
-                Objects.equals(ttime, that.ttime);
+                Objects.equals(ttime, that.ttime) &&
+                Objects.equals(scoreRate, that.scoreRate);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(openTerm, cid, tid, ttime);
+        return Objects.hash(openTerm, cid, tid, ttime, scoreRate);
     }
 }

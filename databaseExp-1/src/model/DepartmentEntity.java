@@ -12,7 +12,7 @@ public class DepartmentEntity {
     private String dTelephone;
 
     @Id
-    @Column(name = "did")
+    @Column(name = "did", nullable = false, length = 2)
     public String getDid() {
         return did;
     }
@@ -22,7 +22,7 @@ public class DepartmentEntity {
     }
 
     @Basic
-    @Column(name = "dName")
+    @Column(name = "dName", nullable = false, length = 20)
     public String getdName() {
         return dName;
     }
@@ -32,7 +32,7 @@ public class DepartmentEntity {
     }
 
     @Basic
-    @Column(name = "dOfficePlace")
+    @Column(name = "dOfficePlace", nullable = true, length = 40)
     public String getdOfficePlace() {
         return dOfficePlace;
     }
@@ -42,7 +42,7 @@ public class DepartmentEntity {
     }
 
     @Basic
-    @Column(name = "dTelephone")
+    @Column(name = "dTelephone", nullable = true, length = 11)
     public String getdTelephone() {
         return dTelephone;
     }

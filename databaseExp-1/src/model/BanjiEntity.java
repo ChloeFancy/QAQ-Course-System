@@ -11,7 +11,7 @@ public class BanjiEntity {
     private String pid;
 
     @Id
-    @Column(name = "cName")
+    @Column(name = "cName", nullable = false, length = 30)
     public String getcName() {
         return cName;
     }
@@ -21,7 +21,7 @@ public class BanjiEntity {
     }
 
     @Basic
-    @Column(name = "cNumber")
+    @Column(name = "cNumber", nullable = true)
     public Integer getcNumber() {
         return cNumber;
     }
@@ -31,7 +31,7 @@ public class BanjiEntity {
     }
 
     @Basic
-    @Column(name = "pid")
+    @Column(name = "pid", nullable = true, length = 7)
     public String getPid() {
         return pid;
     }

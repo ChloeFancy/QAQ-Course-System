@@ -5,8 +5,14 @@
 <hibernate-mapping>
 
     <class name="model.ProfessionalEntity" table="professional" schema="databaseexp">
-        <id name="pid" column="pid"/>
-        <property name="pName" column="pName"/>
-        <property name="did" column="did"/>
+        <id name="pid">
+            <column name="pid" sql-type="varchar(7)" length="7"/>
+        </id>
+        <property name="pName">
+            <column name="pName" sql-type="char(20)" length="20"/>
+        </property>
+        <property name="did">
+            <column name="did" sql-type="char(2)" length="2" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

@@ -15,9 +15,10 @@ public class ScoreEntity implements Serializable {
     private Integer usualResults;
     private Integer examResults;
     private Integer totalResults;
+    private String tid;
 
     @Basic
-    @Column(name = "academic_year")
+    @Column(name = "academic_year", nullable = true, length = 20)
     public String getAcademicYear() {
         return academicYear;
     }
@@ -27,7 +28,7 @@ public class ScoreEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "semester")
+    @Column(name = "semester", nullable = true, length = 10)
     public String getSemester() {
         return semester;
     }
@@ -37,7 +38,7 @@ public class ScoreEntity implements Serializable {
     }
 
     @Id
-    @Column(name = "sid")
+    @Column(name = "sid", nullable = false, length = 10)
     public String getSid() {
         return sid;
     }
@@ -47,7 +48,7 @@ public class ScoreEntity implements Serializable {
     }
 
     @Id
-    @Column(name = "cid")
+    @Column(name = "cid", nullable = false, length = 10)
     public String getCid() {
         return cid;
     }
@@ -57,7 +58,7 @@ public class ScoreEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "usualResults")
+    @Column(name = "usualResults", nullable = true)
     public Integer getUsualResults() {
         return usualResults;
     }
@@ -67,7 +68,7 @@ public class ScoreEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "examResults")
+    @Column(name = "examResults", nullable = true)
     public Integer getExamResults() {
         return examResults;
     }
@@ -77,13 +78,23 @@ public class ScoreEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "totalResults")
+    @Column(name = "totalResults", nullable = true)
     public Integer getTotalResults() {
         return totalResults;
     }
 
     public void setTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
+    }
+
+    @Basic
+    @Column(name = "tid", nullable = false, length = 8)
+    public String getTid() {
+        return tid;
+    }
+
+    public void setTid(String tid) {
+        this.tid = tid;
     }
 
     @Override
@@ -97,12 +108,13 @@ public class ScoreEntity implements Serializable {
                 Objects.equals(cid, that.cid) &&
                 Objects.equals(usualResults, that.usualResults) &&
                 Objects.equals(examResults, that.examResults) &&
-                Objects.equals(totalResults, that.totalResults);
+                Objects.equals(totalResults, that.totalResults) &&
+                Objects.equals(tid, that.tid);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(academicYear, semester, sid, cid, usualResults, examResults, totalResults);
+        return Objects.hash(academicYear, semester, sid, cid, usualResults, examResults, totalResults, tid);
     }
 }

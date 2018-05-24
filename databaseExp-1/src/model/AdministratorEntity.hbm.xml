@@ -5,8 +5,14 @@
 <hibernate-mapping>
 
     <class name="model.AdministratorEntity" table="administrator" schema="databaseexp">
-        <id name="aid" column="aid"/>
-        <property name="aPassword" column="aPassword"/>
-        <property name="aName" column="aName"/>
+        <id name="aid">
+            <column name="aid" sql-type="varchar(30)" length="30"/>
+        </id>
+        <property name="aPassword">
+            <column name="aPassword" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="aName">
+            <column name="aName" sql-type="varchar(8)" length="8" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

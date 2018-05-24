@@ -2,9 +2,7 @@ package controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import dao.daoImpl.AdministratorDAOImpl;
 import dao.daoImpl.StudentDAOImpl;
-import model.AdministratorEntity;
 import model.BasicResponse;
 import model.StudentEntity;
 import org.springframework.stereotype.Controller;

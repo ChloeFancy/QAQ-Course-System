@@ -37,14 +37,11 @@
         httpUtil.getData(this,url).then((response)=>{
           //显示老师在该学年该学期开的课
 
-          this.tableData = response.body.data.map((cur)=>{
-            var course = {};
-            course["cName"]=cur["cName"];
-            course["cid"]=cur["cid"];
-            course["cCredit"]=cur["cCredit"];
-            course["cTotalHours"]=cur["cTotalHours"];
-            course["ttime"]=cur["ttime"];
-            return course;
+          this.tableData = response.body.data.map((item)=>{
+            return Object.keys(item).reduce((prev,cur)=>{
+              prev[cur] = item[cur];
+              return prev;
+            },{});
           });
         }).catch((e)=>{
           console.log(e);

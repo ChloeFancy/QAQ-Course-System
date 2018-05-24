@@ -13,7 +13,7 @@ public class AdministratorEntity {
     private String aName;
 
     @Id
-    @Column(name = "aid")
+    @Column(name = "aid", nullable = false, length = 30)
     public String getAid() {
         return aid;
     }
@@ -23,7 +23,7 @@ public class AdministratorEntity {
     }
 
     @Basic
-    @Column(name = "aPassword")
+    @Column(name = "aPassword", nullable = false, length = 40)
     public String getaPassword() {
         return aPassword;
     }
@@ -33,7 +33,7 @@ public class AdministratorEntity {
     }
 
     @Basic
-    @Column(name = "aName")
+    @Column(name = "aName", nullable = true, length = 8)
     public String getaName() {
         return aName;
     }

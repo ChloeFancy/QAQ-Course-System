@@ -5,12 +5,26 @@
 <hibernate-mapping>
 
     <class name="model.StudentEntity" table="student" schema="databaseexp">
-        <id name="sid" column="sid"/>
-        <property name="sPassword" column="sPassword"/>
-        <property name="sName" column="sName"/>
-        <property name="sClassName" column="sClassName"/>
-        <property name="sSex" column="sSex"/>
-        <property name="sBrithday" column="sBrithday"/>
-        <property name="pid" column="pid"/>
+        <id name="sid">
+            <column name="sid" sql-type="char(10)" length="10"/>
+        </id>
+        <property name="sPassword">
+            <column name="sPassword" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="sName">
+            <column name="sName" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="sClassName">
+            <column name="sClassName" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="sSex">
+            <column name="sSex" sql-type="varchar(2)" length="2"/>
+        </property>
+        <property name="sBrithday">
+            <column name="sBrithday" sql-type="date" />
+        </property>
+        <property name="pid">
+            <column name="pid" sql-type="varchar(7)" length="7"/>
+        </property>
     </class>
 </hibernate-mapping>

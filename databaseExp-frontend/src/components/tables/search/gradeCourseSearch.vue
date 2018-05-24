@@ -11,7 +11,7 @@
           v-for="(item,index) in courses"
           :key="index"
           :label="item.cName"
-          :value="item.cid"
+          :value="JSON.stringify(item)"
         >
         </el-option>
       </el-select>
@@ -38,23 +38,20 @@
         };
         let url = httpUtil.generateURL("teaching","findTeachingCourseName",query);
         httpUtil.getData(this,url).then((response)=>{
-          this.courses = response.body.data.map((cur)=>{
-            var course = {};
-            course["cName"]=cur["cName"];
-            course["cid"]=cur["cid"];
-            course["cCredit"]=cur["cCredit"];
-            course["cTotalHours"]=cur["cTotalHours"];
-            course["ttime"]=cur["ttime"];
-            return course;
+          // console.log(response.body.data);
+          this.courses = response.body.data.map((item)=>{
+            return Object.keys(item).reduce((prev,cur)=>{
+              prev[cur] = item[cur];
+              return prev;
+            },{});
           });
-          console.log(this.courses);
         }).catch((e)=>{
           console.log(e);
         });
       },
-      changeGradeCourse(cid){
-        console.log(cid);
-        this.$emit('search',cid);
+      changeGradeCourse(courseObject){
+        // console.log(cid);
+        this.$emit('search',JSON.parse(courseObject));
       }
     },
     mounted(){

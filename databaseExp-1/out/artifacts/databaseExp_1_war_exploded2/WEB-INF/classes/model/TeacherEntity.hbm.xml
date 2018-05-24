@@ -5,12 +5,26 @@
 <hibernate-mapping>
 
     <class name="model.TeacherEntity" table="teacher" schema="databaseexp">
-        <id name="tid" column="tid"/>
-        <property name="tPassword" column="tPassword"/>
-        <property name="tName" column="tName"/>
-        <property name="tSex" column="tSex"/>
-        <property name="tEducation" column="tEducation"/>
-        <property name="tTitle" column="tTitle"/>
-        <property name="did" column="did"/>
+        <id name="tid">
+            <column name="tid" sql-type="varchar(8)" length="8"/>
+        </id>
+        <property name="tPassword">
+            <column name="tPassword" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="tName">
+            <column name="tName" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="tSex">
+            <column name="tSex" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="tEducation">
+            <column name="tEducation" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="tTitle">
+            <column name="tTitle" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="did">
+            <column name="did" sql-type="char(2)" length="2"/>
+        </property>
     </class>
 </hibernate-mapping>

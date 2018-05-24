@@ -11,7 +11,40 @@
       @update="update"
       @delete="deleteRow"
     >
+
+      <div slot='additional'>
+        <el-button
+          id="addNew"
+          type="primary"
+          size="small"
+          @click="openRateForm"
+        >
+          修改成绩比例
+        </el-button>
+
+      </div>
     </my-table>
+
+    <el-form v-if="ifShowRateForm" size="mini">
+      <el-form-item label="考试成绩/总评成绩">
+        <el-input v-model="examRate" min="0" max="1"></el-input>
+      </el-form-item>
+      <el-button
+        type="primary"
+        size="small"
+        @click="updateRate"
+      >
+        确认修改
+      </el-button>
+      <el-button
+        type="primary"
+        size="small"
+        @click="cancel"
+      >
+        取消修改
+      </el-button>
+    </el-form>
+
   </div>
 </template>
 
@@ -29,27 +62,27 @@
         operationType:'admin', //操作框显示什么类型的按钮
         searchType:'gradeCourseSearch',
         currentCid: null,
+        examRate:'', //成绩比例
+        ifShowRateForm: false,
       }
     },
     methods:{
-      updateGradeTable(cid){
-        this.currentCid = cid;
+      updateGradeTable({cid,scoreRate}){
+        this.examRate = scoreRate||this.examRate;
+        this.currentCid = cid||this.currentCid;
         let query = {
           tid:this.$store.state.user.tid,
           openTerm:this.$store.state.time.openTerm,
-          cid:cid
+          cid:this.currentCid
         };
         let url = httpUtil.generateURL('Myscore','findByCourse',query);
 
         httpUtil.getData(this,url).then((response)=>{
-          this.tableData = response.body.data.map((cur)=>{
-            var score = {};
-            score['sName'] = cur['sName'];
-            score['sid'] = cur['sid'];
-            score['usualResults'] = cur['usualResults'];
-            score['examResults'] = cur['examResults'];
-            score['totalResults'] = cur['totalResults'];
-            return score;
+          this.tableData = response.body.data.map((item)=>{
+            return Object.keys(item).reduce((prev,cur)=>{
+              prev[cur] = item[cur];
+              return prev;
+            },{});
           });
         }).catch((e)=>{
           console.log(e);
@@ -105,11 +138,50 @@
         obj.tid = this.$store.state.user.tid;
         obj.openTerm = this.$store.state.time.openTerm;
         return obj;
+      },
+      openRateForm(){
+        this.ifShowRateForm = true;
+      },
+      updateRate(){
+        let url = httpUtil.generateURL("teaching","updateScoreRate");
+        httpUtil.postData(this,url,this.makeDataCurrent({scoreRate:this.examRate}))
+          .then(({data:{resCode}})=>{
+            if(resCode==='1'){
+              this.updateGradeTable({});
+              this.ifShowRateForm = false;
+              this.$message({
+                type: 'success',
+                message: `修改成功!`
+              });
+            }else{
+              this.$message({
+                type: 'fail',
+                message: `修改失败!`
+              });
+            }
+          })
+      },
+      cancel(){
+        this.ifShowRateForm = false;
       }
     }
   }
 </script>
 
 <style scoped>
-
+  input{
+    width: 20px;
+    text-align: center;
+  }
+  .el-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #eee;
+    background-color: #fff;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+  }
 </style>

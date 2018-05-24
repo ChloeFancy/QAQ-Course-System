@@ -5,9 +5,17 @@
 <hibernate-mapping>
 
     <class name="model.CourseEntity" table="course" schema="databaseexp">
-        <id name="cid" column="cid"/>
-        <property name="cName" column="cName"/>
-        <property name="cCredit" column="cCredit"/>
-        <property name="cTotalHours" column="cTotalHours"/>
+        <id name="cid">
+            <column name="cid" sql-type="varchar(10)" length="10"/>
+        </id>
+        <property name="cName">
+            <column name="cName" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="cCredit">
+            <column name="cCredit" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="cTotalHours">
+            <column name="cTotalHours" sql-type="int(11)" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

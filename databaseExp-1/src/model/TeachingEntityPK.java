@@ -10,7 +10,7 @@ public class TeachingEntityPK implements Serializable {
     private String cid;
     private String tid;
 
-    @Column(name = "openTerm")
+    @Column(name = "openTerm", nullable = false, length = 14)
     @Id
     public String getOpenTerm() {
         return openTerm;
@@ -20,7 +20,7 @@ public class TeachingEntityPK implements Serializable {
         this.openTerm = openTerm;
     }
 
-    @Column(name = "cid")
+    @Column(name = "cid", nullable = false, length = 10)
     @Id
     public String getCid() {
         return cid;
@@ -30,7 +30,7 @@ public class TeachingEntityPK implements Serializable {
         this.cid = cid;
     }
 
-    @Column(name = "tid")
+    @Column(name = "tid", nullable = false, length = 8)
     @Id
     public String getTid() {
         return tid;

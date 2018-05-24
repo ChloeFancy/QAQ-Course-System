@@ -32,6 +32,7 @@
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/TESTDB</prop>
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+                <prop key = "hibernate.show_sql">true</prop>
             </props>
         </property>
 

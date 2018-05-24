@@ -18,7 +18,7 @@ public class StudentEntity {
     private String pid;
 
     @Id
-    @Column(name = "sid")
+    @Column(name = "sid", nullable = false, length = 10)
     public String getSid() {
         return sid;
     }
@@ -28,7 +28,7 @@ public class StudentEntity {
     }
 
     @Basic
-    @Column(name = "sPassword")
+    @Column(name = "sPassword", nullable = false, length = 40)
     public String getsPassword() {
         return sPassword;
     }
@@ -38,7 +38,7 @@ public class StudentEntity {
     }
 
     @Basic
-    @Column(name = "sName")
+    @Column(name = "sName", nullable = false, length = 10)
     public String getsName() {
         return sName;
     }
@@ -48,7 +48,7 @@ public class StudentEntity {
     }
 
     @Basic
-    @Column(name = "sClassName")
+    @Column(name = "sClassName", nullable = false, length = 30)
     public String getsClassName() {
         return sClassName;
     }
@@ -58,7 +58,7 @@ public class StudentEntity {
     }
 
     @Basic
-    @Column(name = "sSex")
+    @Column(name = "sSex", nullable = true, length = 2)
     public String getsSex() {
         return sSex;
     }
@@ -68,7 +68,7 @@ public class StudentEntity {
     }
 
     @Basic
-    @Column(name = "sBrithday")
+    @Column(name = "sBrithday", nullable = true)
     public Date getsBrithday() {
         return sBrithday;
     }
@@ -78,7 +78,7 @@ public class StudentEntity {
     }
 
     @Basic
-    @Column(name = "pid")
+    @Column(name = "pid", nullable = true, length = 7)
     public String getPid() {
         return pid;
     }
@@ -102,6 +102,7 @@ public class StudentEntity {
 //                Objects.equals(pid, that.pid)
                 ;
     }
+
 
     @Override
     public int hashCode() {

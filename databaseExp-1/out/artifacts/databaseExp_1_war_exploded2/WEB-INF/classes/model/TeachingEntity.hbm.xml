@@ -6,10 +6,21 @@
 
     <class name="model.TeachingEntity" table="teaching" schema="databaseexp">
         <composite-id>
-            <key-property name="openTerm" column="openTerm"/>
-            <key-property name="cid" column="cid"/>
-            <key-property name="tid" column="tid"/>
+            <key-property name="openTerm">
+                <column name="openTerm" sql-type="varchar(14)" length="14"/>
+            </key-property>
+            <key-property name="cid">
+                <column name="cid" sql-type="varchar(10)" length="10"/>
+            </key-property>
+            <key-property name="tid">
+                <column name="tid" sql-type="varchar(8)" length="8"/>
+            </key-property>
         </composite-id>
-        <property name="ttime" column="ttime"/>
+        <property name="ttime">
+            <column name="ttime" sql-type="varchar(12)" length="12"/>
+        </property>
+        <property name="scoreRate">
+            <column name="scoreRate" sql-type="double" precision="-1"/>
+        </property>
     </class>
 </hibernate-mapping>

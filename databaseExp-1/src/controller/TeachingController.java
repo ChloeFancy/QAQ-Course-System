@@ -8,10 +8,7 @@ import model.BasicResponse;
 import model.CourseEntity;
 import model.TeachingEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -94,6 +91,29 @@ public class TeachingController extends BaseController<TeachingEntity>{
         }
         return response;
     }
+
+
+    @RequestMapping(value="/updateScoreRate",method = {RequestMethod.POST})
+    @ResponseBody
+    BasicResponse updateScoreRate(TeachingEntity teachingEntity){
+        BasicResponse response = new BasicResponse();
+        response.setResCode("-1");
+        response.setResMsg("Error");
+        teachingDAOImpl teachingDAOImpl = new teachingDAOImpl();
+        try{
+            if(teachingDAOImpl.updateScoreRate(teachingEntity)){
+                response.setResCode("1");
+                response.setResMsg("修改成功");
+            }else{
+                response.setResCode("0");
+                response.setResMsg("修改失败");
+            }
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return response;
+    }
+
 
 
 

@@ -11,7 +11,7 @@ public class ProfessionalEntity {
     private String did;
 
     @Id
-    @Column(name = "pid")
+    @Column(name = "pid", nullable = false, length = 7)
     public String getPid() {
         return pid;
     }
@@ -21,7 +21,7 @@ public class ProfessionalEntity {
     }
 
     @Basic
-    @Column(name = "pName")
+    @Column(name = "pName", nullable = false, length = 20)
     public String getpName() {
         return pName;
     }
@@ -31,7 +31,7 @@ public class ProfessionalEntity {
     }
 
     @Basic
-    @Column(name = "did")
+    @Column(name = "did", nullable = true, length = 2)
     public String getDid() {
         return did;
     }

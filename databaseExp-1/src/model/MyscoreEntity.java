@@ -1,14 +1,13 @@
 package model;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "myscore", schema = "databaseexp", catalog = "")
 @IdClass(MyscoreEntityPK.class)
-public class MyscoreEntity {
+public class MyscoreEntity implements Serializable {
     private String sid;
     private String openTerm;
     private String cid;
@@ -106,5 +105,4 @@ public class MyscoreEntity {
 
         return Objects.hash(sid, openTerm, cid, tid, usualResults, examResults, totalResults);
     }
-
 }

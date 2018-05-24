@@ -4,4 +4,29 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
+    <class name="model.MyscoreEntity" table="myscore" schema="databaseexp">
+        <composite-id>
+            <key-property name="sid">
+                <column name="sid" sql-type="char(10)" length="10"/>
+            </key-property>
+            <key-property name="openTerm">
+                <column name="openTerm" sql-type="varchar(14)" length="14"/>
+            </key-property>
+            <key-property name="cid">
+                <column name="cid" sql-type="varchar(10)" length="10"/>
+            </key-property>
+            <key-property name="tid">
+                <column name="tid" sql-type="varchar(8)" length="8"/>
+            </key-property>
+        </composite-id>
+        <property name="usualResults">
+            <column name="usualResults" sql-type="int(11)"/>
+        </property>
+        <property name="examResults">
+            <column name="examResults" sql-type="int(11)"/>
+        </property>
+        <property name="totalResults">
+            <column name="totalResults" sql-type="int(11)"/>
+        </property>
+    </class>
 </hibernate-mapping>

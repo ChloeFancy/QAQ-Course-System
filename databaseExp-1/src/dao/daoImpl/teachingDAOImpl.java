@@ -13,6 +13,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
+import java.rmi.server.ExportException;
 import java.util.*;
 
 public class teachingDAOImpl implements teachingDAO {
@@ -25,7 +26,7 @@ public class teachingDAOImpl implements teachingDAO {
 
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
-        String hql = "select c.cid,c.cName,c.cCredit,c.cTotalHours,t.ttime " +
+        String hql = "select c.cid,c.cName,c.cCredit,c.cTotalHours,t.scoreRate,t.ttime " +
                 "from TeachingEntity t,CourseEntity c " +
                 "where t.cid=c.cid and t.tid='"+tid+"' and t.openTerm='"+openrTerm+"'";
 
@@ -42,7 +43,8 @@ public class teachingDAOImpl implements teachingDAO {
             json.put("cName",object[1]);
             json.put("cCredit",object[2]);
             json.put("cTotalHours",object[3]);
-            json.put("ttime",object[4]);
+            json.put("scoreRate",object[4]);
+            json.put("ttime",object[5]);
             resultList.add(json);
         }
         return JSONArray.parseArray(JSON.toJSONString(resultList));
@@ -80,7 +82,6 @@ public class teachingDAOImpl implements teachingDAO {
 
     @Override
     public JSONArray findAllDetailByQuery(JSONObject jsonObject) {
-        System.out.println(jsonObject.toJSONString());
 
         Session s = sessionFactory.openSession();
         StringBuffer clause = new StringBuffer(" and ");
@@ -124,5 +125,28 @@ public class teachingDAOImpl implements teachingDAO {
             resultList.add(json);
         }
         return JSONArray.parseArray(JSON.toJSONString(resultList));
+    }
+
+    @Override
+    public Boolean updateScoreRate(TeachingEntity teachingEntity) {
+        TeachingEntity tmp = new TeachingEntity();
+        tmp.setCid(teachingEntity.getCid());
+        tmp.setOpenTerm(teachingEntity.getOpenTerm());
+        tmp.setTid(teachingEntity.getTid());
+
+        System.out.println(JSON.toJSONString(tmp));
+        BaseDAOImpl<TeachingEntity> baseDAO = new BaseDAOImpl<>();
+        try{
+            TeachingEntity target = baseDAO.findByQuery(tmp).get(0);
+            if(target!=null){
+                target.setScoreRate(teachingEntity.getScoreRate());
+                baseDAO.update(target);
+                System.out.println("updated");
+                return true;
+            }
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
+        return false;
     }
 }

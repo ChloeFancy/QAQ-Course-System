@@ -12,4 +12,5 @@ public interface teachingDAO {
     JSONArray findTeachingCourseName(TeachingEntity teachingEntity);
     JSONArray findAllDetail(TeachingEntity teachingEntity);
     JSONArray findAllDetailByQuery(JSONObject json);
+    Boolean updateScoreRate(TeachingEntity teachingEntity);
 }

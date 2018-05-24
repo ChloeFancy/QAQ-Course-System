@@ -18,6 +18,10 @@
       新增
     </el-button>
 
+    <slot name="additional">
+
+    </slot>
+
     <el-table
       :data="myTableData"
       :header-cell-style="{'text-align':'center','height':'50px'}"

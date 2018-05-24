@@ -6,13 +6,30 @@
 
     <class name="model.ScoreEntity" table="score" schema="databaseexp">
         <composite-id>
-            <key-property name="sid" column="sid"/>
-            <key-property name="cid" column="cid"/>
+            <key-property name="sid">
+                <column name="sid" sql-type="char(10)" length="10"/>
+            </key-property>
+            <key-property name="cid">
+                <column name="cid" sql-type="varchar(10)" length="10"/>
+            </key-property>
         </composite-id>
-        <property name="academicYear" column="academic_year"/>
-        <property name="semester" column="semester"/>
-        <property name="usualResults" column="usualResults"/>
-        <property name="examResults" column="examResults"/>
-        <property name="totalResults" column="totalResults"/>
+        <property name="academicYear">
+            <column name="academic_year" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="semester">
+            <column name="semester" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="usualResults">
+            <column name="usualResults" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="examResults">
+            <column name="examResults" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="totalResults">
+            <column name="totalResults" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="tid">
+            <column name="tid" sql-type="varchar(8)" length="8"/>
+        </property>
     </class>
 </hibernate-mapping>

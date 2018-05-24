@@ -15,8 +15,7 @@ select * from administrator;
 -- -------------------------------
 
 create table department(
-id int auto_increment primary key,
-did char(2),--系编号
+did char(2) primary key,--系编号
 dName char(20) unique not null,--系名称
 dOfficePlace char(40),--办公地点
 dTelephone char(11)--办公电话
@@ -29,8 +28,7 @@ select * from department;
 -- Tabel structure for Professional 专业关系表
 -- ----------------------------------
 create table professional(
-id int auto_increment primary key,
-pid varchar(7),
+pid varchar(7) primary key,
 pName char(20) unique not null,
 did char(2),
 constraint fk_professional_department foreign key (did) references department(did)
@@ -46,8 +44,7 @@ select * from professional;
 --Table structure for banji 班级关系表
 -- --------------------------
 create table banji(
-id int auto_increment primary key,
-cName varchar(30),
+cName varchar(30) primary key,
 cNumber int,
 pid varchar(7),
 constraint fk_class_professional foreign key (pid) references professional(pid)
@@ -65,7 +62,6 @@ select * from banji;
 
 
 create table student(
-id int auto_increment primary key,
 sid char(10) primary key,
 sPassword varchar(20) not null,
 sName varchar(10) not null,
@@ -99,29 +95,6 @@ insert into course values('08301001','分子物理学','4','40');
 insert into course values('08302001','通信学','3','30');
 select * from course;
 
-create table score(
-academic_year varchar(20) default null,
-semester varchar(10) default null,
-sid char(10),
-cid varchar(10),
-usualResults int default null,
-examResults int default null,
-totalResults int default null,
-constraint pk_score primary key(sid,cid),
-constraint fk_t_score_stu foreign key(sid)references student (sid),
-constraint fk_t_score_cource foreign key(cid) references course (cid)
-);
-insert into score values('1','1','15120111','08305001','90','80','90');
-insert into score values('2','2','15120112','08305002','80','76','87');
-insert into score values('2','3','15120113','08305001','60','70','65');
-insert into score values('3','1','15120115','08305002','80','90','87');
-insert into score values('2','2','15120111','08305002','78','98','89');
-insert into score values('3','3','15120114','08305003','90','89','90');
-insert into score values('2','1','15120117','08305004','89','78','88');
-insert into score values('3','2','15120116','08305001','90','89','90');
-insert into score values('1','3','15120111','08305003','78','89','89');
-select * from score;
-
 
 create table myscore(
 sid char(10) not null,
@@ -136,16 +109,15 @@ constraint fk_my_score_stu foreign key(sid)references student (sid),
 constraint fk_my_score_cource foreign key(tid,cid,openTerm) references teaching(tid,cid,openTerm)
 );
 
-insert into myscore values('15120111', '2017-2018 冬季','08305001','0102', '90','80','90');
-insert into myscore values('15120112', '2017-2018 冬季','08305002','0101', '80','76','87');
-insert into myscore values('15120113', '2017-2018 冬季','08305001','0102', '60','70','65');
-insert into myscore values('15120115', '2017-2018 冬季','08305002','0101', '80','90','87');
-insert into myscore values('15120111', '2017-2018 冬季','08305002','0101', '78','98','89');
-insert into myscore values('15120114', '2017-2018 冬季','08305003','0102', '90','89','90');
+insert into myscore values('15120111', '2018-2019 春季','08305001','0102', '90','80','90');
+insert into myscore values('15120112', '2018-2019 春季','08305002','0101', '80','76','87');
+insert into myscore values('15120113', '2018-2019 春季','08305001','0102', '60','70','65');
+insert into myscore values('15120115', '2018-2019 春季','08305002','0101', '80','90','87');
+insert into myscore values('15120111', '2018-2019 春季','08305002','0101', '78','98','89');
+insert into myscore values('15120114', '2018-2019 春季','08305003','0102', '90','89','90');
 insert into myscore values('15120117', '2018-2019 秋季','08305004','0101', '89','78','88');
-insert into myscore values('15120116', '2017-2018 冬季','08305001','0102', '90','89','90');
+insert into myscore values('15120116', '2018-2019 春季','08305001','0102', '90','89','90');
 insert into myscore values('15120111', '2018-2019 秋季','08305003','0102', '78','89','89');
-
 
 create table teacher(
 tid varchar(8) primary key,
@@ -161,6 +133,12 @@ insert into teacher values('0101','123','陈迪茂','男','本科','副教授','01');
 insert into teacher values('0102','123','马小红','女','博士研究生','讲师','01');
 insert into teacher values('0201','123','张心颖','女','硕士研究生','教授','02');
 insert into teacher values('0103','123','吴宝钢','男','硕士研究生','讲师','01');
+
+
+
+
+
+
 select * from teacher;
 
 
@@ -184,6 +162,62 @@ insert into teaching values('2013-2014 冬季','08302001','0201','星期一 5-8');
 select * from teaching;
 
 
+//控制加入新的密码，加密加入
+
+DELIMITER $
+CREATE TRIGGER encodeTPassword before INSERT ON teacher
+  FOR EACH ROW 
+  BEGIN
+    SET NEW.tPassword = md5(New.tPassword);
+end$
+DELIMITER ;
+
+DELIMITER $
+CREATE TRIGGER encodeSPassword before INSERT ON student
+  FOR EACH ROW 
+  BEGIN
+    SET NEW.sPassword = md5(New.sPassword);
+end$
+DELIMITER ;
+
+DELIMITER $
+CREATE TRIGGER encodeAPassword before INSERT ON administrator
+  FOR EACH ROW 
+  BEGIN
+    SET NEW.aPassword = md5(New.aPassword);
+end$
+DELIMITER ;
+
+
+
+//修改新的密码，加密加入
+
+DELIMITER $
+CREATE TRIGGER encodeTPasswordWhenUpdate before update ON teacher
+  FOR EACH ROW 
+  BEGIN
+    SET NEW.tPassword = md5(New.tPassword);
+end$
+DELIMITER ;
+
+DELIMITER $
+CREATE TRIGGER encodeSPasswordWhenUpdate before update ON student
+  FOR EACH ROW 
+  BEGIN
+    SET NEW.sPassword = md5(New.sPassword);
+end$
+DELIMITER ;
+
+DELIMITER $
+CREATE TRIGGER encodeAPasswordWhenUpdate before update ON administrator
+  FOR EACH ROW 
+  BEGIN
+    SET NEW.aPassword = md5(New.aPassword);
+end$
+DELIMITER ;
+
+
+//others
 
 DELIMITER $
 CREATE TRIGGER modifyGrade AFTER INSERT ON Myscore

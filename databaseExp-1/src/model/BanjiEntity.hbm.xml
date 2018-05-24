@@ -5,8 +5,14 @@
 <hibernate-mapping>
 
     <class name="model.BanjiEntity" table="banji" schema="databaseexp">
-        <id name="cName" column="cName"/>
-        <property name="cNumber" column="cNumber"/>
-        <property name="pid" column="pid"/>
+        <id name="cName">
+            <column name="cName" sql-type="varchar(30)" length="30"/>
+        </id>
+        <property name="cNumber">
+            <column name="cNumber" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="pid">
+            <column name="pid" sql-type="varchar(7)" length="7" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

@@ -9,7 +9,7 @@ public class ScoreEntityPK implements Serializable {
     private String sid;
     private String cid;
 
-    @Column(name = "sid")
+    @Column(name = "sid", nullable = false, length = 10)
     @Id
     public String getSid() {
         return sid;
@@ -19,7 +19,7 @@ public class ScoreEntityPK implements Serializable {
         this.sid = sid;
     }
 
-    @Column(name = "cid")
+    @Column(name = "cid", nullable = false, length = 10)
     @Id
     public String getCid() {
         return cid;
